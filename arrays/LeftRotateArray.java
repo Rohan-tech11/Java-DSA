@@ -22,6 +22,10 @@ public class LeftRotateArray {
 		int[] newArr = rotateLeftArray(arr, arr.length);
 		System.out.println(Arrays.toString(newArr));
 
+		int i = 98;
+		int j = 65;
+		System.out.println(i % 10);
+
 	}
 
 }
