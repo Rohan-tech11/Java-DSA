@@ -16,7 +16,8 @@ public class CountFrequencyUsingMap {
 			if (freq.containsKey(arr[i])) {
 				freq.put(arr[i], freq.get(arr[i]) + 1);
 			} else {
-				freq.put(arr[i], 1);
+				freq.put(arr[i], 1); // initial first step becasue map is empty
+										// in first time
 
 			}
 		}

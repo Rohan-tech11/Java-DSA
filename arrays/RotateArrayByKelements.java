@@ -21,7 +21,6 @@ public class RotateArrayByKelements {
 		// Reverse first n-k elements
 		Reverse(arr, 0, lenght - position - 1); // 6,5,4,3,2,1,7,8
 		// Reverse last k elements
-		Reverse(arr, lenght - position, lenght - 1); // 6,5,4,3,2,1,8,7
 		// Reverse whole array
 		Reverse(arr, 0, lenght - 1); // 7,8,1,2,3,4,5,6
 

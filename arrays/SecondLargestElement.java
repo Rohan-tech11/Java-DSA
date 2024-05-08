@@ -14,6 +14,7 @@ public class SecondLargestElement {
 
 	public static void secondSmallest(int[] arr) {
 		int smallest = Integer.MAX_VALUE;
+		System.out.println(Integer.MAX_VALUE);
 		int secondSmallest = Integer.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) { // traversing the array to find
 												// // the smallest
@@ -31,7 +32,8 @@ public class SecondLargestElement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = new int[]{2, 3, 4, 56, 56, 6, 4, 3, 8, 89};
+		int[] arr = new int[]{2, 3, 4, 56, 56, 6, 4, 3, 8, 89}; // len =10
+																// ,index =9
 		System.out.println(
 				" second largest number is " + secondLargestNumber(arr));
 		secondSmallest(arr);
