@@ -10,4 +10,5 @@ package linkedList;
 	public Node(int value) {
 		this.value = value;
 	}
+
 }
