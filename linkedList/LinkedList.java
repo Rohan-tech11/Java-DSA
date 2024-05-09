@@ -57,6 +57,37 @@ public class LinkedList {
 
 	}
 
+	// adding node in the first
+	public void prepend(int value) {
+		Node newNode = new Node(value);
+
+		if (length == 0) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			newNode.next = head;
+			head = newNode;
+		}
+		length += 1;
+	}
+
+	// removing node in the first
+	public Node removeFirst() {
+		Node temp = head;
+		if (length == 0) {
+			return null;
+		}
+
+		head = head.next;
+		temp.next = null;
+		length -= 1;
+		// edge case to checking if list is having only one element
+		if (length == 0) {
+			tail = null;
+		}
+		return temp;
+
+	}
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
