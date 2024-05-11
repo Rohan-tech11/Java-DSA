@@ -120,6 +120,23 @@ public class Main {
 		System.out.println("LL after remove() of last node:");
 		myLinkedList6.printList();
 
+		// --------------------------------------------------------------------
+		// testing the remove ()
+		System.out.println("  testing the reverse method ");
+
+		LinkedList myLinkedList7 = new LinkedList(1);
+		myLinkedList7.append(2);
+		myLinkedList7.append(3);
+		myLinkedList7.append(4);
+
+		System.out.println("LL before reverse():");
+		myLinkedList7.printList();
+
+		myLinkedList7.reverse();
+
+		System.out.println("\nLL after reverse():");
+		myLinkedList7.printList();
+
 	}
 
 }

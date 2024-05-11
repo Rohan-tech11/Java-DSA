@@ -158,6 +158,24 @@ public class LinkedList {
 		return temp;
 
 	}
+
+	// reverse method
+	public void reverse() {
+		Node temp = head;
+		head = tail;
+		tail = temp;
+		Node after = temp.next;
+		Node before = null;
+		for (int i = 0; i < length; i++) {
+
+			after = temp.next; // pointing after node variable to the next temp
+								// node
+			temp.next = before; // pointing next temp node to before(reversing
+								// the arrow)
+			before = temp;// moving the before to temp
+			temp = after;// moving the temp to after
+		}
+	}
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
