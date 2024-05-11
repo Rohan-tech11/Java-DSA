@@ -36,7 +36,7 @@ public class LinkedList {
 			return null;
 		}
 		// pre node points out the node before null
-		// so we can point out the tail to the pre node
+		// so we can point out the tail to the pre before node
 		// temp node is the node to be removed from the list
 		// traversing the list to move temp node to last of the list
 		while (temp.next != null) {
@@ -136,6 +136,27 @@ public class LinkedList {
 			return true;
 
 		}
+	}
+
+	// remove method leveraging get,remove first and last method
+	public Node remove(int index) {
+
+		if (index < 0 || index >= length) {
+			return null;
+		}
+		if (index == 0) {
+			return removeFirst();
+		}
+		if (index == length - 1) {
+			return removeLast();
+		}
+		Node temp = get(index);
+		Node pre = get(index - 1);
+		pre.next = temp.next;
+		temp.next = null;
+		length--;
+		return temp;
+
 	}
 	public void printList() {
 		Node temp = head;

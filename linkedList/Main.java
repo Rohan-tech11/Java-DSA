@@ -6,7 +6,7 @@ public class Main {
 		/*
 		 * --------------------------------------------------------------------
 		 */
-		// testing the append and removelast
+		// testing the append and removelast()
 		LinkedList myLinkedList = new LinkedList(1);
 		myLinkedList.append(2);
 		// (2) Items - Returns 2 Node
@@ -66,6 +66,7 @@ public class Main {
 
 		// --------------------------------------------------------------------
 		// testing the insert ()
+		System.out.println("  testing the insert method ");
 
 		LinkedList myLinkedList5 = new LinkedList(1);
 		myLinkedList5.append(3);
@@ -90,6 +91,34 @@ public class Main {
 		System.out.println("\nLL after insert(4) at end:");
 		myLinkedList5.printList();
 		myLinkedList5.getLength();
+
+		// --------------------------------------------------------------------
+		// testing the remove ()
+		System.out.println("  testing the remove method ");
+
+		LinkedList myLinkedList6 = new LinkedList(1);
+		myLinkedList6.append(2);
+		myLinkedList6.append(3);
+		myLinkedList6.append(4);
+		myLinkedList6.append(5);
+
+		System.out.println("LL before remove():");
+		myLinkedList6.printList();
+
+		System.out.println("\nRemoved node:");
+		System.out.println(myLinkedList6.remove(2).value);
+		System.out.println("LL after remove() in middle:");
+		myLinkedList6.printList();
+
+		System.out.println("\nRemoved node:");
+		System.out.println(myLinkedList6.remove(0).value);
+		System.out.println("LL after remove() of first node:");
+		myLinkedList6.printList();
+
+		System.out.println("\nRemoved node:");
+		System.out.println(myLinkedList6.remove(2).value);
+		System.out.println("LL after remove() of last node:");
+		myLinkedList6.printList();
 
 	}
 
