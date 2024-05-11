@@ -3,8 +3,9 @@ package linkedList;
 public class Main {
 
 	public static void main(String[] args) {
-		// --------------------------------------------------------------------
-
+		/*
+		 * --------------------------------------------------------------------
+		 */
 		// testing the append and removelast
 		LinkedList myLinkedList = new LinkedList(1);
 		myLinkedList.append(2);
@@ -22,12 +23,12 @@ public class Main {
 		// testing the prepend
 		LinkedList myLinkedList1 = new LinkedList(2);
 		myLinkedList1.prepend(1);
-		System.out.println(" newly prepended list  is  ");
+		System.out.println(" newly prepended list is ");
 		myLinkedList1.printList();
 
 		// --------------------------------------------------------------------
 		// testing the remove first
-		System.out.println("  testing the removeFirst method ");
+		System.out.println(" testing the removeFirst method ");
 
 		LinkedList myLinkedList2 = new LinkedList(2);
 		myLinkedList2.append(1);
@@ -38,6 +39,57 @@ public class Main {
 		System.out.println(myLinkedList2.removeFirst().value);
 		// (0) Items - Returns null
 		System.out.println(myLinkedList2.removeFirst());
+
+		// --------------------------------------------------------------------
+		// testing the get ()
+		System.out.println(" testing the get method ");
+
+		LinkedList myLinkedList3 = new LinkedList(0);
+		myLinkedList3.append(1);
+		myLinkedList3.append(2);
+		myLinkedList3.append(3);
+
+		System.out.println(myLinkedList3.get(2).value);
+
+		// --------------------------------------------------------------------
+		// testing the set ()
+		System.out.println("  testing the set method ");
+
+		LinkedList myLinkedList4 = new LinkedList(0);
+		myLinkedList4.append(1);
+		myLinkedList4.append(2);
+		myLinkedList4.append(3);
+		myLinkedList4.printList();
+
+		System.out.println(myLinkedList4.set(2, 3));
+		myLinkedList4.printList();
+
+		// --------------------------------------------------------------------
+		// testing the insert ()
+
+		LinkedList myLinkedList5 = new LinkedList(1);
+		myLinkedList5.append(3);
+
+		System.out.println("LL before insert():");
+		myLinkedList5.printList();
+
+		myLinkedList5.insert(1, 2);
+
+		System.out.println("\nLL after insert(2) in middle:");
+		myLinkedList5.printList();
+		myLinkedList5.getLength();
+
+		myLinkedList5.insert(0, 0);
+
+		System.out.println("\nLL after insert(0) at beginning:");
+		myLinkedList5.printList();
+		myLinkedList5.getLength();
+
+		myLinkedList5.insert(4, 4);
+
+		System.out.println("\nLL after insert(4) at end:");
+		myLinkedList5.printList();
+		myLinkedList5.getLength();
 
 	}
 

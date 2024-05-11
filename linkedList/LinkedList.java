@@ -88,6 +88,55 @@ public class LinkedList {
 		return temp;
 
 	}
+
+	// getMethod
+
+	public Node get(int index) {
+		if (index < 0 || index >= length) {
+			return null;
+		}
+		Node temp = head;
+		for (int i = 0; i < index; i++) {
+			temp = temp.next;
+		}
+		return temp;
+	}
+
+	// set method //leveraging get method the get the node which needs to be
+	// updated
+	public boolean set(int index, int value) {
+		Node temp = get(index);
+		if (temp != null) {
+			temp.value = value;
+			return true;
+		}
+
+		return false;
+
+	}
+
+	// insert method ,leveraging get,append,prepend method to insert new node
+	public boolean insert(int index, int value) {
+		if (index < 0 || index > length) {
+			return false;
+		} else if (index == 0) {
+			prepend(value);
+			return true;
+		} else if (index == length) {
+			append(value);
+			return true;
+		}
+
+		else {
+			Node newNode = new Node(value);
+			Node temp = get(index - 1);
+			newNode.next = temp.next;
+			temp.next = newNode;
+			length++;
+			return true;
+
+		}
+	}
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
