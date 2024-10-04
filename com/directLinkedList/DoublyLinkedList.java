@@ -8,7 +8,7 @@ public class DoublyLinkedList {
 
 	class Node {
 
-		private int value;
+		int value;
 		private Node next;
 		private Node prev;
 
@@ -32,7 +32,7 @@ public class DoublyLinkedList {
 			tail = newNode;
 		} else {
 			tail.next = newNode;
-			tail.prev = tail;
+			newNode.prev = tail;
 			tail = newNode;
 			length += 1;
 		}
@@ -249,6 +249,17 @@ public class DoublyLinkedList {
 
 		// Return the removed node.
 		return temp;
+	}
+
+	public void swapFirstLast() {
+		// If there are less than two nodes in the list, there's nothing to swap
+		if (length < 2)
+			return;
+
+		// Swap the values of the head and tail nodes
+		int temp = head.value;
+		head.value = tail.value;
+		tail.value = temp;
 	}
 
 }
