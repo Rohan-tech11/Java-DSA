@@ -253,6 +253,7 @@ public class DoublyLinkedList {
 
 	public void swapFirstLast() {
 		// If there are less than two nodes in the list, there's nothing to swap
+		// check the constraints
 		if (length < 2)
 			return;
 
